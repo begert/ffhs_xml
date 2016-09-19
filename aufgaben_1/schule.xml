@@ -1,32 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE schule SYSTEM "modulliste.dtd">
+<!DOCTYPE schule SYSTEM "schule.dtd">
 
 <schule>
-    <modulliste>
 
-        <modul kuerzel="m1">
-            <modul-name>Modul One</modul-name>
-            <studiengang>BSC INF</studiengang>
-            <studiengang>BSC WI</studiengang>
-        </modul>
+    <studiengaenge>
+        <studiengang id="inf">BSC Informatik</studiengang>
+        <studiengang id="wi">Bsc Wirtschaftsinformatik</studiengang>
+    </studiengaenge>
 
-        <modul kuerzel="m2">
-            <modul-name>Modul Two</modul-name>
-            <studiengang>BSC INF</studiengang>
-            <studiengang>BSC WI</studiengang>
-        </modul>
-
-    </modulliste>
+    <module>
+        <modul kuerzel="m1" studiengang="inf wi">Modul Eins</modul>
+        <modul kuerzel="m2" studiengang="wi">Modul Zwei</modul>
+    </module>
 
     <personen>
-        <dozent geschlecht="m">
+        <dozent geschlecht="m" unterrichtet="m1 m2">
             <name>Dozent</name>
             <vorname>Hans</vorname>
             <adresse>xxx</adresse>
             <geburtsdatum>1.1.1970</geburtsdatum>
             <ahv-nummer>1.2.3.4.5</ahv-nummer>
-            <unterrichtet>m1</unterrichtet>
-            <unterrichtet>m2</unterrichtet>
         </dozent>
         <student geschlecht="m">
             <name>Student</name>

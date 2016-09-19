@@ -1,0 +1,33 @@
+<!ENTITY % person.basecontent "name, vorname, adresse, geburtsdatum, ahv-nummer">
+<!ENTITY % person.baseattr "geschlecht (m|w) #REQUIRED">
+
+<!ELEMENT schule (studiengaenge, module, personen)>
+
+<!ELEMENT studiengaenge (studiengang+)>
+<!ELEMENT studiengang (#PCDATA)>
+
+<!ATTLIST studiengang id ID #REQUIRED>
+
+<!ELEMENT module (modul+)>
+
+<!ELEMENT modul (#PCDATA)>
+<!ATTLIST modul kuerzel ID #REQUIRED
+                studiengang IDREFS #REQUIRED>
+<!ELEMENT modul-name (#PCDATA)>
+
+<!ELEMENT personen (dozent*, student*)>
+<!ELEMENT dozent (%person.basecontent;)>
+<!ATTLIST dozent %person.baseattr;
+                 unterrichtet IDREFS #IMPLIED>
+<!ELEMENT student (%person.basecontent;, pruefungsnote*)>
+<!ATTLIST student %person.baseattr;>
+
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT vorname (#PCDATA)>
+<!ELEMENT adresse (#PCDATA)>
+<!ELEMENT geburtsdatum (#PCDATA)>
+<!ELEMENT ahv-nummer (#PCDATA)>
+
+<!ELEMENT pruefungsnote (#PCDATA)>
+<!ATTLIST pruefungsnote modul IDREF #REQUIRED
+                        datum NMTOKEN #REQUIRED>
