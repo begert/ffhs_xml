@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE CONTACTLIST SYSTEM "contacts.dtd">
+<CONTACTLIST>
+    <CONTACT>
+        <NAME>dkfjd</NAME>
+        <ADDRESS>kdjfkdjf</ADDRESS>
+        <PHONE type="mobile">dkfjk</PHONE>
+        <PHONE type="private">dkfjk</PHONE>
+        <MAIL>kdjfkdj</MAIL>
+    </CONTACT>
+    <CONTACT>
+        <NAME>dkfjd</NAME>
+        <ADDRESS>kdjfkdjf</ADDRESS>
+        <PHONE type="office">dkfjk</PHONE>
+        <PHONE type="fax">dkfjk</PHONE>
+        <MAIL>kdjfkdj</MAIL>
+    </CONTACT>
+</CONTACTLIST>
