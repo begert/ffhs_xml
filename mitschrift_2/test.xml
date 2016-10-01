@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contactlist xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="test.xsd">
+    <contact>
+        <name>dkfjd</name>
+        <address>kdjfkdjf</address>
+        <phone type="mobile">dkfjk</phone>
+        <phone type="private">dkfjk</phone>
+        <mail>kdjfkdj</mail>
+    </contact>
+    <contact>
+        <name>dkfjd</name>
+        <address>kdjfkdjf</address>
+        <phone type="office">dkfjk</phone>
+        <phone type="fax">dkfjk</phone>
+        <mail>kdjfkdj</mail>
+    </contact>
+</contactlist>
