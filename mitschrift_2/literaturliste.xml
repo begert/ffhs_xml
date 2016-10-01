@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE literaturliste SYSTEM "literaturliste.dtd">
+
+<literaturliste xmlns="http://www.literatur.com"
+                xmlns:b="http://www.buecher.com"
+                xmlns:v="http://www.verlage.com"
+                xmlns:a="http://www.authoren.com">
+
+    <b:buch>
+        <b:titel>XML</b:titel>
+        <v:verlag>W3L</v:verlag>
+        <a:author>Margit Becher</a:author>
+    </b:buch>
+
+    <b:buch>
+        <b:titel>crowdsurfing</b:titel>
+        <v:verlag>O RLY?</v:verlag>
+        <a:author>Meier Hans</a:author>
+        <a:author>Muster Vreni</a:author>
+    </b:buch>
+
+    <b:buch>
+        <b:titel>How to Weisnidwas</b:titel>
+        <v:verlag>O RLY?</v:verlag>
+        <a:author>Meier Hans</a:author>
+    </b:buch>
+
+</literaturliste>

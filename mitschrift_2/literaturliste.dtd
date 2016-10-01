@@ -1,0 +1,10 @@
+<!ELEMENT literaturliste (b:buch)*>
+<!ATTLIST literaturliste
+        xmlns CDATA #REQUIRED
+        xmlns:b CDATA #REQUIRED
+        xmlns:v CDATA #REQUIRED
+        xmlns:a CDATA #REQUIRED>
+<!ELEMENT b:buch (b:titel, v:verlag, a:author+)>
+<!ELEMENT b:titel (#PCDATA)>
+<!ELEMENT v:verlag (#PCDATA)>
+<!ELEMENT a:author (#PCDATA)>
