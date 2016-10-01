@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<schule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="schule.xsd">
+
+    <studiengaenge>
+        <studiengang id="inf">BSC Informatik</studiengang>
+        <studiengang id="wi">Bsc Wirtschaftsinformatik</studiengang>
+    </studiengaenge>
+
+    <module>
+        <modul kuerzel="m1" studiengang="inf wi">Modul Eins</modul>
+        <modul kuerzel="m2" studiengang="wi">Modul Zwei</modul>
+    </module>
+
+    <personen>
+        <dozent geschlecht="m" unterrichtet="m1">
+            <name>Dozent</name>
+            <vorname>Hans</vorname>
+            <adresse>xxx</adresse>
+            <geburtsdatum>1980-07-22</geburtsdatum>
+            <ahv-nummer>123.1234.5678.99</ahv-nummer>
+        </dozent>
+        <student geschlecht="m">
+            <name>Student</name>
+            <vorname>Hans</vorname>
+            <adresse>xxx</adresse>
+            <geburtsdatum>1990-08-04</geburtsdatum>
+            <ahv-nummer>123.1234.5678.99</ahv-nummer>
+            <pruefungsnote modul="m1" datum="2016-01-13">5.3</pruefungsnote>
+            <pruefungsnote modul="m2" datum="2016-12-01">6.0</pruefungsnote>
+        </student>
+    </personen>
+</schule>

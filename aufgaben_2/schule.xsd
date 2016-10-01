@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="schule">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="studiengaenge" minOccurs="1" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="studiengang" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="id" type="xs:ID" use="required"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="module" minOccurs="1" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="modul" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="kuerzel" type="xs:ID" use="required"/>
+                                            <xs:attribute name="studiengang" type="xs:IDREFS" use="required"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="personen" minOccurs="1" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="dozent" type="dozentType" minOccurs="1" maxOccurs="unbounded" />
+                            <xs:element name="student" type="studentType" minOccurs="1" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="personBaseType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string" />
+            <xs:element name="vorname" type="xs:string" />
+            <xs:element name="adresse" type="xs:string" />
+            <xs:element name="geburtsdatum" type="xs:date" />
+            <xs:element name="ahv-nummer" type="ahvNummerType" />
+        </xs:sequence>
+        <xs:attribute name="geschlecht" type="geschlechtType" />
+    </xs:complexType>
+
+    <xs:complexType name="dozentType">
+        <xs:complexContent>
+            <xs:extension base="personBaseType">
+                <xs:attribute name="unterrichtet" type="xs:IDREFS" />
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="studentType">
+        <xs:complexContent>
+            <xs:extension base="personBaseType">
+                <xs:sequence>
+                    <xs:element name="pruefungsnote" minOccurs="0" maxOccurs="unbounded">
+                        <xs:complexType>
+                            <xs:simpleContent>
+                                <xs:extension base="noteType">
+                                    <xs:attribute type="xs:IDREF" name="modul" use="required"/>
+                                    <xs:attribute type="xs:date" name="datum" use="required"/>
+                                </xs:extension>
+                            </xs:simpleContent>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="noteType">
+        <xs:restriction base="xs:decimal">
+            <xs:maxInclusive value="6.0" />
+            <xs:minInclusive value="1.0" />
+            <xs:fractionDigits value="2" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="ahvNummerType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{3}\.\d{4}\.\d{4}\.\d{2}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="geschlechtType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="w" />
+            <xs:enumeration value="m" />
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
