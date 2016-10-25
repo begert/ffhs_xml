@@ -1,0 +1,20 @@
+* Aus welchen zwei Teilen setzt sich der qualifizierte Name (engl. Qualified Name oder QName) zusammen und was ist die Bedeutung dieser Teile?
+
+Der qualifizierte Name setzt sich aus einem Präfix und einem lokalen Teil zusammen und wird durch einen Doppelpunkt getrennt.
+- Der Präfix definiert den Namensraum des qualifizierten Namens und muss mit einer Namensraum-Deklaration übereinstimmen.
+- Der lokale Teil ist der (lokale) Element oder Attributname.
+
+
+* Welche Probleme können beim Einsatz von Namensräumen mit einer DTD auftreten?
+
+Das Konzept der Namensräume wurde nach der Entwicklung von DTD's eingeführt.
+Deshalb ist eine Deklaration von Namensräumen in einer DTD nur möglich, durch Angabe des vollständig qualifizierten Names.
+Dabei entsteht das Problem, dass der Namensraumpräfix fix ist und in einer XML-Instanz nicht mehr geändert werden kann.
+Der wichtigste Vorteil von Namesräumen, nämlich die universelle Eindeutigkeit von Element- und Attributnamen,
+kann somit nicht mehr gewährleistet werden.
+
+
+* Was für ein Dokument muss am Ort, der durch den Namensraum-URI identifiziert ist, stehen?
+
+Eine Namensraum-URI (in den meisten Fällen eine URL) ist lediglich eine Identifikation und muss nicht zwingend existieren.
+Es ist also ist nicht definiert, was an diesem Ort stehen muss.

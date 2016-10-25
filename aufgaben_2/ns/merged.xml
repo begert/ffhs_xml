@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<data:Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:data="http://www.data.com"
+      xmlns:loc="http://www.locations.com"
+      xmlns:dev="http://www.devices.com"
+      xsi:schemaLocation="http://www.data.com data.xsd">
+
+    <loc:Address>
+        <Name>Laboratory for Web Science</Name>
+        <Street>Überlandstr. 12</Street>
+        <City State="VS">Brig</City>
+        <Country>Schweiz</Country>
+        <PostalCode>CH-3900</PostalCode>
+    </loc:Address>
+
+    <dev:Device>
+        <Name Type="Server">lws.ffhs.ch</Name>
+        <Address>123.45.67.8</Address>
+    </dev:Device>
+
+</data:Data>

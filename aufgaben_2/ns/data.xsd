@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:loc="http://www.locations.com"
+           xmlns:dev="http://www.devices.com"
+           targetNamespace="http://www.data.com">
+
+    <xs:import namespace="http://www.locations.com" schemaLocation="locations.xsd" />
+    <xs:import namespace="http://www.devices.com" schemaLocation="devices.xsd" />
+
+    <xs:element name="Data">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="loc:Address" />
+                <xs:element ref="dev:Device" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
