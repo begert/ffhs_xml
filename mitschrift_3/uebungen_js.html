@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+
+<button type="button" id="btn1">Sag hallo!</button>
+
+<button type="button" id="btn2">roll th dice!</button>
+
+<p id="content"></p>
+
+<script>
+    setContent = function(content) {
+        document.getElementById('content').innerHTML = content;
+    };
+
+    document.getElementById('btn1').addEventListener('click', function() {
+        setContent('Hallo');
+    });
+
+    document.getElementById('btn2').addEventListener('click', function() {
+        var number = Math.floor((Math.random() * 1000) + 1);
+        setContent(number);
+    });
+</script>
+</body>
+</html>

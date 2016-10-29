@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liste der Module</title>
+</head>
+<body>
+    <h1>Lister der Module</h1>
+    <ul>
+        <li>IKS - Installation und Konfiguration Serverdienste</li>
+        <li>WebG - Webgrundlagen</li>
+        <li>OEMF - Online Einführung in die Mathematik</li>
+        <li>WBQ - Wissenschaftliche Begleitqualifikation</li>
+    </ul>
+
+    <h1>Tabelle - Stundenplan</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>K&uuml;rzel</th>
+                <th>Dozent</th>
+                <th>Datum</th>
+                <th>Zeit</th>
+                <th>Ort</th>
+                <th>Raum</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>IKS</td>
+                <td>Matthias Imsand</td>
+                <td>1.1.2016</td>
+                <td>13:45</td>
+                <td>Bern</td>
+                <td>Welle7</td>
+            </tr>
+            <tr>
+                <td>WebG</td>
+                <td>Illir Fetai</td>
+                <td>2.1.2016</td>
+                <td>13:45</td>
+                <td>Bern</td>
+                <td>Welle7</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>Formular zur Anmeldung</h1>
+    <form action="." method="post">
+        <fieldset>
+            <legend>Per&ouml;nliche Informationen</legend>
+            <p>
+                <label for="male">Mann</label>
+                <input type="radio" id="male" name="gender" value="male"/>
+                <label for="female">Frau</label>
+                <input type="radio" id="female" name="gender" value="female"/>
+            </p>
+
+            <p>
+                <label for="name">Name</label>
+                <input type="text" id="name" value="" />
+            </p>
+
+            <p>
+                <label for="email">E-Mail</label>
+                <input type="email" id="email" value="" />
+            </p>
+
+            <p>
+                <label for="birthdate">Geburtsdatum</label>
+                <input type="date" id="birthdate" value="" />
+            </p>
+
+            <p>
+                <button type="submit">Absenden</button>
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>
