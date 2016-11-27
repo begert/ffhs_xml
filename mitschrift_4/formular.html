@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formular</title>
+    <style type="text/css">
+        label {
+            display:block;
+            margin-top:10px;
+        }
+        input {
+            width:300px;
+        }
+        button {
+            margin-top:30px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form" method="get">
+        <div>
+            <label for="name">Name, Vorname</label>
+            <input type="text" id="name" required pattern="[A-Za-z]*, [A-Za-z]*">
+        </div>
+        <div>
+            <label for="email">E-Mail</label>
+            <input type="email" id="email">
+        </div>
+        <div>
+            <label for="tel">Telefon</label>
+            <input type="text" id="tel" pattern="\+41 \([0-9]{3}\) [0-9]{4}">
+        </div>
+        <div>
+            <label for="birthdate">Geburtsdatum</label>
+            <input type="date" id="birthdate" required>
+        </div>
+        <div>
+            <label for="count">Anzahl der bisherigen Leistungspunkte</label>
+            <input type="number" id="count">
+        </div>
+        <div>
+            <label for="homepage">URL der Homepage</label>
+            <input type="url" id="homepage">
+        </div>
+        <div>
+            <label for="pw">Passwort</label>
+            <input type="password" id="pw" required>
+        </div>
+        <div>
+            <label for="pw2">Passwort bestätigen</label>
+            <input type="password" id="pw2" required>
+        </div>
+
+        <div>
+            <button type="submit">Absenden</button>
+        </div>
+    </form>
+
+    <script type="text/javascript">
+        var pw = document.getElementById('pw');
+        var pw2 = document.getElementById('pw2');
+        pw2.oninput = function() {
+            pw2.setCustomValidity(pw.value === pw2.value ? '' : 'Passwords not equal.');
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="content1"></div>
+<div id="content2"></div>
+<div id="content3"></div>
+<div id="content4"></div>
+
+<script type="text/javascript">
+    var sum = 0;
+    for(var i = 1; i <= 10; i++) {
+        sum += i;
+    }
+    document.getElementById('content1').innerHTML = sum;
+
+    function rechteckUmfang(laenge, breite) {
+        return 2 * laenge + 2 * breite;
+    }
+    document.getElementById('content2').innerHTML = rechteckUmfang(20, 10);
+
+    function isEven(num) {
+        return num % 2 == 0;
+    }
+    document.getElementById('content3').innerHTML = isEven(3);
+
+    var kreis = {
+        radius: 20,
+        flaeche: function() {
+            return this.radius * this.radius * 3.1415;
+        },
+        diameter: function() {
+            return this.radius * 2;
+        }
+    }
+    kreis.radius = 30;
+    document.getElementById('content4').innerHTML = kreis.flaeche() + ' ' + kreis.diameter();
+</script>
+
+</body>
+</html>
