@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Formular</title>
+    <link href="formular.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h1>Formular - Anmeldung Kurs XY</h1>
+
+<form action="formular.html" method="post">
+
+    <fieldset>
+        <legend>Persönliche Informationen</legend>
+
+        <div class="input-group">
+            <label>Anrede</label>
+            <div class="control-group">
+                <input type="radio" id="male" required name="gender" value="male">
+                <label for="male">Herr</label>
+                <input type="radio" id="female" required name="gender" value="female">
+                <label for="female">Frau</label>
+            </div>
+        </div>
+        <div class="input-group">
+            <label for="name">Vollständiger Name</label>
+            <input class="control" type="text" name="name" id="name" required>
+        </div>
+        <div class="input-group">
+            <label for="address">Addresse / Postfach</label>
+            <input class="control" type="text" name="address" id="address" required>
+        </div>
+        <div class="input-group">
+            <label for="zip">Postleitzahl</label>
+            <input class="control" type="text" name="zip" id="zip" required>
+        </div>
+        <div class="input-group">
+            <label for="city">Ort</label>
+            <input class="control" type="text" name="city" id="city" required>
+        </div>
+        <div class="input-group">
+            <label for="email">E-Mail</label>
+            <input class="control" type="email" name="email" id="email">
+        </div>
+        <div class="input-group">
+            <label for="birthdate">Geburtsdatum</label>
+            <input class="control" type="date" name="birthdate" id="birthdate">
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Kurs</legend>
+
+        <div class="input-group">
+            <label for="date">Wunschdatum</label>
+            <input class="control" type="date" name="date" id="date">
+        </div>
+        <div class="input-group">
+            <label for="places">Kursplätze</label>
+            <input class="control" type="number" min="1" max="5" name="places" id="places">
+        </div>
+        <div class="input-group">
+            <label for="knowledge-level">Vorkenntnisse zum Thema XY</label>
+            <select class="control" name="knowledge-level" id="knowledge-level">
+                <option value="0" selected>keine</option>
+                <option value="1">wenig</option>
+                <option value="2">gute</option>
+                <option value="3">sehr gute</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="reason">Grund für Kursbesuch</label>
+            <input class="control" type="text" name="reason" id="reason" list="reasonList">
+            <datalist id="reasonList">
+                <option value="geschäftlich">
+                <option value="privat">
+                <option value="andere">
+            </datalist>
+        </div>
+        <div class="input-group">
+            <label for="remarks" aria-hidden="true">Bemerkungen</label>
+            <textarea class="control" name="remarks" id="remarks"></textarea>
+        </div>
+    </fieldset>
+
+    <div>
+        <input type="checkbox" name="terms-of-use" id="terms-of-use" required>
+        <label for="terms-of-use">Ich akzeptiere die Nutzungsbedingungen meiner persönlichen Angaben.</label>
+    </div>
+
+    <div>
+        <input class="button" type="submit" value="Anmeldung absenden">
+    </div>
+</form>
+
+</body>
+</html>
