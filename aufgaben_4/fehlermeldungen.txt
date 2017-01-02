@@ -1,0 +1,9 @@
+"Schreiben Sie dazu einen kurzen Text, wo und wie auf Ihrem Formular Fehlermeldungen angezeigt werden sollen."
+
+Falls Fehlermeldungen nach dem Absenden des Formulars auftreten (zusätzliche Validierung, oder sonstige
+allfällige technische Probleme), werden diese in einem (z.B. rot formatierten) Abschnitt oberhalb
+des Formulars zusammengefasst.
+Einzelne Details, welche ein bestimmtes Feld betreffen werden beim entsprechenden Feld mit weiteren
+Informationen präzisiert.
+
+Alle eingegeben Informationen (auch fehlerhafte) sollen nach fehlgeschlagener Übermittlung bestehen bleiben.
