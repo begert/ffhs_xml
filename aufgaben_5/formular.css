@@ -1,0 +1,79 @@
+body {
+    font-family: sans-serif;
+    font-weight: 300;
+}
+@media screen and (min-width: 600px) {
+    body {
+        margin: 0 auto;
+        width:600px;
+    }
+    .input-group .error {
+        margin-left: 240px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .input-group .error {
+        margin-left: 0px;
+    }
+}
+
+
+h1 {
+    font-size: 2em;
+    font-weight: 500;
+}
+
+fieldset {
+    border: solid gray 1px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+}
+fieldset legend {
+    color: gray;
+}
+
+.input-group {
+    margin-bottom: 5px;
+}
+.input-group > label {
+    float: left;
+    display: block;
+    width: 240px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.control-group {
+    display: inline-block;
+    width: 300px;
+}
+
+.control {
+    width: 300px;
+    font-family: sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    border: solid #cccccc 1px;
+    background-color: #f9f9f9;
+}
+textarea.control {
+    height: 100px;
+}
+
+.button:hover {
+    background-color: #cccccc;
+}
+.button {
+    font-size: 1.1em;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: solid black 1px;
+    border-radius: 5px;
+}
+
+.error {
+    color: red;
+    font-size: 0.7em;
+}

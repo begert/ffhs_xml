@@ -1,0 +1,51 @@
+body {
+    font-family: sans-serif;
+    font-weight: 300;
+}
+@media screen and (min-width: 600px) {
+    body {
+        margin: 0 auto;
+        width:600px;
+    }
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 1.3em;
+    font-weight: 400;
+}
+
+img.floating-left {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.comment-toggle > a {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.comments {
+    font-size: 0.8em;
+}
+
+.comments > * {
+    padding-bottom: 20px;
+}
+
+.comment-truncated {
+    color: gray;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.comment {
+    color: black;
+}
